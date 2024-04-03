@@ -1,7 +1,20 @@
 import os
 
+"""
+Test Python Script - Used for testing sphinx auto doc generation
+"""
+
+__version__ = "0.1.0"
+
 def list_directories(path):
-    """List directories in the specified path."""
+    """
+    Return a list of names of the directories.
+
+    :param path: path to the directories that will be printed 
+    :type path: str
+    :return: The directories list.
+    :rtype: list[str]
+    """
     directories = []
     for item in os.listdir(path):
         full_path = os.path.join(path, item)
