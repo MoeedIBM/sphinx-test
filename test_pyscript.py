@@ -1,6 +1,7 @@
 import os
 
 def list_directories(path):
+    """List directories in the specified path."""
     directories = []
     for item in os.listdir(path):
         full_path = os.path.join(path, item)
@@ -11,6 +12,7 @@ def list_directories(path):
 
 
 def main():
+    """Main function to list directories on the desktop."""
     desktop_path = os.path.expanduser("~/Desktop")
     directories = list_directories(desktop_path)
     if directories:
