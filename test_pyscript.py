@@ -17,6 +17,7 @@ def main():
         print("Directories on Desktop:")
         for directory in directories:
             print(directory)
+            print("--------")
     else:
         print("No directories found on Desktop.")
 
