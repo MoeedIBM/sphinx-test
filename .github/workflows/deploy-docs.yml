@@ -3,7 +3,7 @@ name: Deploy Sphinx Documentation
 on:
   push:
     branches:
-      - main  
+      - main  # Change this to your default branch if different
 
 jobs:
   deploy:
@@ -22,6 +22,11 @@ jobs:
         run: |
           pip install sphinx
         working-directory: docs
+
+      - name: Initialize SSH agent
+        run: |
+          eval $(ssh-agent)
+          ssh-add ~/.ssh/id_rsa
 
       - name: Build documentation
         run: |
