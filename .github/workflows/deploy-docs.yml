@@ -26,7 +26,7 @@ jobs:
       - name: Initialize SSH agent
         run: |
           eval $(ssh-agent)
-          ssh-add ~/.ssh/id_rsa
+          ssh-add /home/runner/.ssh/id_rsa
 
       - name: Build documentation
         run: |
