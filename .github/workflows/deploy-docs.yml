@@ -21,6 +21,7 @@ jobs:
       - name: Install Sphinx
         run: |
           pip install sphinx
+          pip install sphinx_rtd_theme
         working-directory: docs
 
       - name: Build documentation
